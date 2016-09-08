@@ -37,7 +37,11 @@ namespace Shotgun.Classes
         {
             randomNumber = random.Next(1, 4);
 
-            if (aiBulletCount == 0 && PlayerActions.bulletCount == 0)
+            if (aiBulletCount >= 3)
+            {
+                randomNumber = 2;
+            }
+            else if (aiBulletCount == 0 && PlayerActions.bulletCount == 0)
             {
                 randomNumber = 1;
             }
@@ -45,10 +49,6 @@ namespace Shotgun.Classes
             {
                 randomNumber = 1;
             }
-            else if (aiBulletCount >= 3)
-            {
-                randomNumber = 2;
-            } 
         }
 
         public static void AiReload()

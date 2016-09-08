@@ -6,13 +6,11 @@ namespace Shotgun.Classes
     {
         static Random random = new Random();
         static int randomNumber;
-        //public static int aiBulletCount = 0;
-        public static int aiBulletCount = 1;
+        public static int aiBulletCount = 0;
 
         public static void AiActionControl ()
         {
-            //AiLogic();
-            randomNumber = 2;
+            AiLogic();
 
             switch (randomNumber)
             {

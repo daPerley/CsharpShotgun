@@ -41,10 +41,10 @@ namespace Shotgun.Classes
             }
         }
 
-        public static void AiShoot()
+        public static void AiShoot() //Porblem below in this method
         {
-            aiAction = "SHOOT";   
-            sfxShoot.Play();
+            aiAction = "SHOOT";  
+            sfxShoot.Play(); // Won't play when application is running but works fine when there's a breakpoint infront of it 
             AiLabelsUpdate();
 
             if (PlayerActions.playerReload)
